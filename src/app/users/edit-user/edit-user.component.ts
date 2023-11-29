@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { IUser } from '../../model/IUser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -21,7 +21,8 @@ export class EditUserComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, 
               private servcie: UserService,
               private fb: FormBuilder,
-              private _snackBar: MatSnackBar) {}
+              private _snackBar: MatSnackBar,
+              private router: Router) {}
 
   ngOnInit(): void {
 
@@ -85,6 +86,7 @@ export class EditUserComponent implements OnInit {
       next: (data) => {
         console.log(data);
         this._snackBar.open("User updated successfully with ID " + this.userId);
+        this.router.navigate(['users/list']);
       },
       error: (err) => {
         this._snackBar.open("Unable to update user.");
