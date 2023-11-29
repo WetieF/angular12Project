@@ -1,0 +1,29 @@
+/* .main-content {
+    margin: 50px;
+}
+ */
+
+.action-link {
+    padding: 10px;
+}
+
+.header-content {
+    margin-left: 100px;
+}
+
+.list-users {
+    margin: 10px;
+}
+
+.username {
+    min-width: 300px;
+}
+
+.user-title {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+}
