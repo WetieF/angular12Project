@@ -10,7 +10,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class DeleteUserComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute, private service: UserService,
+  constructor(private activatedRoute: ActivatedRoute, 
+              private service: UserService,
               private _snackBar: MatSnackBar,
               private route: Router) {}
 

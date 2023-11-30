@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class AddUserComponent implements OnInit {
 
   addUserForm: FormGroup = new FormGroup({});
-  user!: IUser;
+  //user!: IUser;
 
   constructor(private fb: FormBuilder, private service: UserService,
               private _snackBar: MatSnackBar,
