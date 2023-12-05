@@ -18,7 +18,9 @@ const routes: Routes = [
       { path: 'edit/:id', component: EditUserComponent },
       { path: 'create', component: AddUserComponent },
     ]
-  }
+  },
+  
+  { path: 'roles', loadChildren: () => import('./roles/roles.module').then(m => m.RolesModule) }
 ];
 
 @NgModule({
